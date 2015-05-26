@@ -16,10 +16,19 @@ export default HalSerializer.extend({
     }
   },
 
-  typeForRoot: function(typeKey){
-    var result = this._super(typeKey);
+  modelNameFromPayloadKey(key){
+    var result = this._super(key);
     if (result === 'account') {
       result = 'stack';
+    }
+
+    return result;
+  },
+
+  payloadKeyFromModelName(modelName){
+    let result = this._super(modelName);
+    if (result === 'stack') {
+      result = 'account';
     }
 
     return result;
