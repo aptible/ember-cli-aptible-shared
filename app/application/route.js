@@ -8,6 +8,7 @@ export default Ember.Route.extend({
     error: function(err) {
       this.get('sentry').captureException(err);
       this.intermediateTransitionTo('error', err);
+      Ember.onerror(err);
     }
   },
   activate() {
