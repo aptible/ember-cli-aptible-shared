@@ -1,5 +1,6 @@
 import config from "../config/environment";
 import ApplicationAdapter from "./application";
+import Ember from "ember";
 import Inflector from 'ember-inflector';
 
 export default ApplicationAdapter.extend({
