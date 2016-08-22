@@ -1,4 +1,4 @@
-# Ember-cli-aptible-shared
+# [DEPRECATED] Ember-cli-aptible-shared
 
 This README outlines the details of collaborating on this Ember addon.
 
