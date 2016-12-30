@@ -29,7 +29,7 @@ module('Unit: Changeset', {
 test('throws if key is not set', (assert) => {
   assert.throws(() => {
     changeset = Changeset.create({
-      initialValue: Ember.K
+      initialValue() {}
     });
   }, /must define `key`/);
 });
@@ -37,7 +37,7 @@ test('throws if key is not set', (assert) => {
 test('throws if initialValue is not set', (assert) => {
   assert.throws(() => {
     changeset = Changeset.create({
-      key: Ember.K
+      key() {}
     });
   }, /must define `initialValue`/);
 });
